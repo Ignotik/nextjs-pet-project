@@ -1,0 +1,147 @@
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 249px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.title {
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+}
+
+.routes {
+  display: flex;
+  gap: 20px;
+
+  &__home {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(130, 130, 130, 0.3) !important;
+    text-decoration: underline !important;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(130, 130, 130, 0.5);
+  }
+}
+
+.about {
+  display: grid;
+  gap: 25px;
+  margin-bottom: 60px;
+  grid-template-areas:
+    "about__flower about__flower_1 about__text"
+    "about__flower about__flower_2 about__text";
+
+  &__flower {
+    grid-area: about__flower;
+  }
+  &__flower_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      ". . .";
+    grid-area: about__flower_1;
+  }
+  &__flower_2 {
+    grid-area: about__flower_2;
+  }
+  &__text {
+    grid-area: about__text;
+    align-self: center;
+
+    p {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.text {
+  color: rgba(51, 51, 51, 1);
+  margin-bottom: 30px;
+}
+
+.list {
+  margin-left: 20px;
+  color: rgba(51, 51, 51, 1);
+  margin-bottom: 30px;
+
+  li {
+    list-style-image: url(../../assets/images/aboutImg/circle.png);
+    padding-left: 10px;
+    color: rgba(51, 51, 51, 1);
+  }
+}
+
+.offers {
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.cooperation {
+  margin-bottom: 30px;
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    "cooperation__text cooperation__flower cooperation__flower_1"
+    "cooperation__text cooperation__flower cooperation__flower_2";
+
+  &__text {
+    grid-area: cooperation__text;
+    align-self: center;
+
+    p {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__flower {
+    grid-area: cooperation__flower;
+  }
+
+  &__flower_1 {
+    grid-area: cooperation__flower_1;
+  }
+
+  &__flower_2 {
+    grid-area: cooperation__flower_2;
+  }
+}
+
+.best {
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.subtitle {
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 18px;
+  color: rgba(149, 109, 132, 1);
+  margin-bottom: 20px;
+}
+
+.numbers {
+  margin-left: 15px;
+  margin-bottom: 50px;
+
+  li {
+    margin-bottom: 20px;
+  }
+}
