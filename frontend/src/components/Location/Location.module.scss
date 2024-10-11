@@ -1,0 +1,20 @@
+.routes {
+  display: flex;
+  gap: 20px;
+
+  &__home {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(130, 130, 130, 0.3) !important;
+    text-decoration: underline !important;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(130, 130, 130, 0.5);
+  }
+}

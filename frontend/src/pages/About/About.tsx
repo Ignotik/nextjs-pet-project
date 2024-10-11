@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "./About.module.scss";
 import flower1 from "../../assets/images/aboutImg/Rectangle 1273.png";
 import flower2 from "../../assets/images/aboutImg/Rectangle 1275.png";
@@ -8,17 +7,13 @@ import flower4 from "../../assets/images/aboutImg/Rectangle 1277.png";
 import flower5 from "../../assets/images/aboutImg/Rectangle 1279.png";
 import flower6 from "../../assets/images/aboutImg/Rectangle 1278.png";
 import { useLocationInUrl } from "../../hooks/useLocationInUrl";
+import Location from "../../components/Location/Location";
 
 const About: React.FC = () => {
   const title = useLocationInUrl();
   return (
     <section className={styles.wrapper}>
-      <article className={styles.routes}>
-        <Link to="/" className={styles.routes__home}>
-          Главная
-        </Link>
-        <span className={styles.routes__title}>{title}</span>
-      </article>
+      <Location title={title} />
       <h2 className={styles.title}>Цветочный интернет магазин</h2>
       <article className={styles.about}>
         <img src={flower1} className={styles.about__flower} alt="Цветы" />

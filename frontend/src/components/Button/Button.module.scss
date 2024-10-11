@@ -1,0 +1,19 @@
+.button {
+  margin-top: 30px;
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+  color: white;
+  padding: 20px 50px;
+  border-radius: 7px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15) inset;
+  background-color: rgba(149, 109, 132, 1);
+
+  img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
