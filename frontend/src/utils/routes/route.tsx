@@ -1,4 +1,5 @@
 import About from "../../pages/About/About";
+import Catalog from "../../pages/Catalog/Catalog";
 import Contacts from "../../pages/Contacts/Contacts";
 import Delivery from "../../pages/Delivery/Delivery";
 import Forum from "../../pages/Forum/Forum";
@@ -7,6 +8,7 @@ import OfficeDelivery from "../../pages/OfficeDelivery/OfficeDelivery";
 
 const routes = [
   { path: "/", element: <Main /> },
+  { path: "/catalog", element: <Catalog /> },
   { path: "/forum", element: <Forum /> },
   { path: "/about", element: <About /> },
   { path: "/stocks", element: <div>Акции</div> },

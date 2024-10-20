@@ -83,12 +83,7 @@ const Header: React.FC = () => {
             </div>
           </article>
           <article className={styles.nav__menu}>
-            <select name="category">
-              <option value="ReadyMadeBouquets">Готовые букеты</option>
-              <option value="Roses">Розы</option>
-              <option value="Tulips">Тюльпаны</option>
-              <option value="Lilies">Лилии</option>
-            </select>
+            <Link to="/catalog">Каталог</Link>
             <Link to="/forum">Форум</Link>
             <Link to="/reviews">Отзывы</Link>
             <Link to="/stocks">Акции</Link>

@@ -31,11 +31,6 @@ export class UserController {
         password: hashPassword,
       },
     });
-    const basket = await prisma.cart.create({
-      data: {
-        userId: user.id,
-      },
-    });
     const token = generateJwt(user.id, user.email);
     return res.json({ token });
   }

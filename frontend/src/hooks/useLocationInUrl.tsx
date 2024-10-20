@@ -9,6 +9,8 @@ export const useLocationInUrl = () => {
       return "Главная";
     case "/about":
       return "О нас";
+    case "/catalog":
+      return "Каталог";
     case "/delivery":
       return "Доставка и оплата";
     case "/office":
