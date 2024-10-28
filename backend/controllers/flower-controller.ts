@@ -47,9 +47,19 @@ export class FlowerController {
   }
 
   async getAll(req: Request, res: Response) {
-    const flowers = await prisma.flower.findMany();
-    const count = await prisma.flower.count();
-    res.send({ flowers, count });
+    const page = parseInt(req.query.page as string) || 1;
+    const limit = parseInt(req.query.limit as string) || 10;
+    const offset = (page - 1) * limit;
+
+    const [flowers, count] = await prisma.$transaction([
+      prisma.flower.findMany({
+        skip: offset,
+        take: limit,
+      }),
+      prisma.flower.count(),
+    ]);
+
+    res.send({ flowers, count, page, totalPages: Math.ceil(count / limit) });
   }
   async get(req: Request, res: Response) {
     const flower = await prisma.flower.findUnique({

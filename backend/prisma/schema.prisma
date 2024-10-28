@@ -22,7 +22,7 @@ model Flower {
   description String
   price       Int
   img         String
-  type String
+  type String?
   offer String?
   cart CartItem[]
 }

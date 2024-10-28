@@ -1,7 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { AppDispatch } from "../store/store";
 
-const url = process.env.REACT_APP_port_server;
+const url = "http://localhost/api";
 
 interface User {
   id: string;
@@ -128,7 +129,7 @@ const userSlice = createSlice({
   },
 });
 
-export const initializeAuth = () => async (dispatch: any) => {
+export const initializeAuth = () => async (dispatch: AppDispatch) => {
   const token = localStorage.getItem("token");
   if (token) {
     await dispatch(fetchCurrentUser(token));

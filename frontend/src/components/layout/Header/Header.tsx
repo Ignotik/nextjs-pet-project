@@ -83,7 +83,7 @@ const Header: React.FC = () => {
             </div>
           </article>
           <article className={styles.nav__menu}>
-            <Link to="/catalog">Каталог</Link>
+            <Link to="/flowers">Каталог</Link>
             <Link to="/forum">Форум</Link>
             <Link to="/reviews">Отзывы</Link>
             <Link to="/stocks">Акции</Link>

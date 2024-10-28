@@ -1,25 +1,26 @@
 import dotenv from "dotenv";
+import cors from "cors";
 import express, { Request, Response } from "express";
 import routes from "./routes/index";
 import fileUpload from "express-fileupload";
 import bodyParser from "body-parser";
 import errorHandler from "./middleware/ErrorHandlingMiddleware";
+import path from "path";
 
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT;
 
-// Body parsing middleware
+app.use(cors());
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// File upload middleware
 app.use(fileUpload({}));
+app.use(express.static(path.join(__dirname, "static")));
 
-// Routes
 app.use("/api", routes);
 
-// Error handling middleware
 app.use(errorHandler);
 
 app.get("/", (_req: Request, res: Response) => {
